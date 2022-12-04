@@ -28,7 +28,6 @@ function getPlayerInput() {
     let playerInput = false
     while (playerInput === false) {
         const choice = prompt('Please enter "Rock", "Paper" or "Scissors" only')
-        if (!choice) location.reload()
         const choiceinLower = choice.toLocaleLowerCase()
         if (choiceinLower !== 'rock' &&
             choiceinLower !== 'paper' &&
