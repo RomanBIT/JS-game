@@ -64,6 +64,14 @@ function game() {
             console.log(`Draws: ${draws}, Wins: ${wins}, Losses: ${losses}`)
         }
     }
+    console.log('Results are:')
+    if (wins < losses) {
+        console.log('You are a loser')
+    } if (wins > losses) {
+        console.log('You are a winner')
+    } if (wins == losses) {
+        console.log('Well, it`s a draw!')
+    }
 }
 game()
 
