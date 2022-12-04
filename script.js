@@ -15,13 +15,13 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
-        return 'It`s a draw! Try one more time'
+        return 'It`s a draw!'
     } else if (computerSelection == 'rock') {
-        return (playerSelection == 'paper') ? 'You win!' : 'You lose! Rock beats Scissors'
+        return (playerSelection == 'paper') ? 'You win!' : 'You lose!'
     } else if (computerSelection == 'paper') {
-        return (playerSelection == 'scissors') ? 'You win!' : 'You lose! Paper beats Rock'
+        return (playerSelection == 'scissors') ? 'You win!' : 'You lose!'
     } else if (computerSelection == 'scissors') {
-        return (playerSelection == 'rock') ? 'You win!' : 'You lose! Scissors beats Paper'
+        return (playerSelection == 'rock') ? 'You win!' : 'You lose!'
     }
 }
 
@@ -44,13 +44,25 @@ function getPlayerInput() {
 
 function game() {
     let draws = 0;
-    let playerWins = 0;
-    let computerWins = 0;
+    let wins = 0;
+    let losses = 0;
     for (let i = 1; i <= 5; i++) {
         computerPlay();
         const computerSelection = computer;
         const playerSelection = getPlayerInput()
         console.log('Round ' + i, playRound(playerSelection, computerSelection))
+        if (playRound(playerSelection, computerSelection) === 'It`s a draw!') {
+            draws++
+            console.log(`Draws: ${draws}, Wins: ${wins}, Losses: ${losses}`)
+        }
+        if (playRound(playerSelection, computerSelection) === 'You win!') {
+            wins++
+            console.log(`Draws: ${draws}, Wins: ${wins}, Losses: ${losses}`)
+        }
+        if (playRound(playerSelection, computerSelection) === 'You lose!') {
+            losses++
+            console.log(`Draws: ${draws}, Wins: ${wins}, Losses: ${losses}`)
+        }
     }
 }
 game()
