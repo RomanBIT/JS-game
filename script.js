@@ -48,7 +48,7 @@ function game() {
         computerPlay();
         const computerSelection = computer;
         const playerSelection = getPlayerInput()
-        console.log('Deep Blue ' + computer)
+        console.log('Deep Blue says ' + computer)
         console.log('Round ' + i, playRound(playerSelection, computerSelection))
         if (playRound(playerSelection, computerSelection) === 'It`s a draw!') {
             draws++
