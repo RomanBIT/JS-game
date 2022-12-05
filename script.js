@@ -27,8 +27,7 @@ function playRound(playerSelection, computerSelection) {
 function getPlayerInput() {
     let playerInput = false
     while (playerInput === false) {
-        const choice = prompt('Please enter "Rock", "Paper" or "Scissors" only')
-        const choiceinLower = choice.trim().toLocaleLowerCase()
+        const choiceinLower = prompt('Please enter "Rock", "Paper" or "Scissors" only').trim().toLocaleLowerCase()
         if (choiceinLower !== 'rock' &&
             choiceinLower !== 'paper' &&
             choiceinLower !== 'scissors') {
