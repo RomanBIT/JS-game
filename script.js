@@ -33,7 +33,6 @@ function getPlayerInput() {
             choiceinLower !== 'paper' &&
             choiceinLower !== 'scissors') {
             alert('Please fill in the form and try again')
-            continue
         } else {
             playerInput = true
             return choiceinLower
